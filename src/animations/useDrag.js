@@ -5,7 +5,8 @@ import { useGesture } from 'react-with-gesture';
 export default ({ imgSrc }) => {
   const [isGrabbing, setIsGrabbing] = useState(false);
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }))
-  const interaction = useGesture(({ down, delta }) => {
+  const interaction = useGesture(({ event, down, delta }) => {
+    event.preventDefault()
     set({ xy: down ? delta : [0,0] })
     setIsGrabbing(down);
     // does this negate the dont-trigger-rerenders-benefit of react-spring?
