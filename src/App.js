@@ -1,21 +1,26 @@
-import React from 'react';
-import { useSpring } from 'react-spring';
 import './App.css';
+import React from 'react';
 import Bauble from './components/Bauble';
+import useDrag from './animations/useDrag'
 
+const BAUBLE_DATA = {
+  AVATAR: { imgSrc: '/avatar.jpg' },
+  VCU: { imgSrc: '/vcu.png' },
+  SAGE: { imgSrc: '/sage.png' },
+  PIVOTAL: { imgSrc: '/pivotal.png' },
+}
 
 function App() {
-  const peek = useSpring({
-    from: {top: '-30%'},
-    to: {top: '-10%'},
-    config: {
-      velocity: 2,
-      mass: 10
-    }
-  })
+  
   return (
     <div className="App">
-      <Bauble imgSrc='/avatar_lights.jpg' animation={peek} />
+      <div style={{ backgroundColor: 'hotpink', width: '100px', height: '100px' }}></div>
+      <div className='bauble-container'>
+        <Bauble {...useDrag(BAUBLE_DATA.AVATAR)} />
+        <Bauble {...useDrag(BAUBLE_DATA.VCU)} />
+        <Bauble {...useDrag(BAUBLE_DATA.SAGE)} />
+        <Bauble {...useDrag(BAUBLE_DATA.PIVOTAL)} />
+      </div>
     </div>
   );
 }

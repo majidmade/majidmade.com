@@ -1,13 +1,15 @@
 import React from 'react';
 import { animated } from 'react-spring';
 
-export default ({ imgSrc, animation }) => (
+export default ({ 
+  imgSrc,
+  animation = {},
+  interaction = () => ({})
+}) => (
   <animated.img
-    style={{
-      position: 'fixed',
-      ...animation
-    }}
-    className='circular'
+    {...interaction()}
+    className='bauble'
+    style={{ ...animation }}
     src={imgSrc}
   />
 )
