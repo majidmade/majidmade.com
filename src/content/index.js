@@ -20,8 +20,8 @@ export const COLORS = {
 }
 
 export const TITLES = {
-  [AVATAR]: { title: 'Majid Razvi' },
-  [VCU]: { title: 'VCU' },
-  [SAGE]: { title: 'Sage' },
-  [PIVOTAL]: { title: 'Pivotal' },
+  [AVATAR]: { title: 'Majid Razvi', subtitle: '❤️ Denver, CO' },
+  [VCU]: { title: 'VCU', subtitle: '🎓 Philosophy' },
+  [SAGE]: { title: 'Sage', subtitle: '💸 Software Engineer' },
+  [PIVOTAL]: { title: 'Pivotal', subtitle: '☁️ Software Engineer' },
 }

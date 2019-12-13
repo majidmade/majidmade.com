@@ -9,7 +9,7 @@ export default ({ activeBauble }) => {
   return (
     <animated.div style={{ color: textColor }}>
       <h1>{title}</h1>
-      <h2>{subtitle}</h2>
+      <h3>{subtitle}</h3>
     </animated.div>
   )
 }

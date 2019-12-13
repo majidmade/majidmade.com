@@ -9,17 +9,19 @@ const { AVATAR, VCU, SAGE, PIVOTAL } = baubles;
 
 function App() {
   const baubleState = useState(null);
-  const [ activeBauble ] = baubleState;
-  
+  const [activeBauble] = baubleState;
+
   return (
     <div className="App">
-      <Background activeBauble={activeBauble} />
-      <TitleText activeBauble={activeBauble}/>
-      <div className='bauble-container'>
-        <Bauble bauble={AVATAR} baubleState={baubleState} />
-        <Bauble bauble={VCU} baubleState={baubleState} />
-        <Bauble bauble={SAGE} baubleState={baubleState} />
-        <Bauble bauble={PIVOTAL} baubleState={baubleState} />
+      <div>
+        <Background activeBauble={activeBauble} />
+        <TitleText activeBauble={activeBauble} />
+        <div className='bauble-container'>
+          <Bauble bauble={AVATAR} baubleState={baubleState} />
+          <Bauble bauble={VCU} baubleState={baubleState} />
+          <Bauble bauble={SAGE} baubleState={baubleState} />
+          <Bauble bauble={PIVOTAL} baubleState={baubleState} />
+        </div>
       </div>
     </div>
   );
