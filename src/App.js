@@ -1,26 +1,24 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import Bauble from './components/Bauble';
-import useDrag from './animations/useDrag'
-
-const BAUBLE_DATA = {
-  AVATAR: { imgSrc: '/avatar.jpg' },
-  VCU: { imgSrc: '/vcu.png' },
-  SAGE: { imgSrc: '/sage.png' },
-  PIVOTAL: { imgSrc: '/pivotal.png' },
-}
+import useDragWithState from './hooks/useDrag'
+import HelpText from './components/HelpText';
+import content from './content';
 
 function App() {
-  
+  const { AVATAR, VCU, SAGE, PIVOTAL } = content;
+  const [activeBauble, setActiveBauble] = useState(null);
+  const useDrag = useDragWithState(setActiveBauble);
+
   return (
     <div className="App">
-      <div style={{ backgroundColor: 'hotpink', width: '100px', height: '100px' }}></div>
       <div className='bauble-container'>
-        <Bauble {...useDrag(BAUBLE_DATA.AVATAR)} />
-        <Bauble {...useDrag(BAUBLE_DATA.VCU)} />
-        <Bauble {...useDrag(BAUBLE_DATA.SAGE)} />
-        <Bauble {...useDrag(BAUBLE_DATA.PIVOTAL)} />
+        <Bauble content={AVATAR} isActiveBauble={activeBauble === AVATAR} {...useDrag(AVATAR)} />
+        <Bauble content={VCU} isActiveBauble={activeBauble === VCU} {...useDrag(VCU)} />
+        <Bauble content={SAGE} isActiveBauble={activeBauble === SAGE} {...useDrag(SAGE)} />
+        <Bauble content={PIVOTAL} isActiveBauble={activeBauble === PIVOTAL} {...useDrag(PIVOTAL)} />
       </div>
+      <HelpText isGrabbing={activeBauble} />
     </div>
   );
 }

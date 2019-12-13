@@ -1,15 +1,26 @@
 import React from 'react';
 import { animated } from 'react-spring';
+import { BAUBLES } from '../content';
 
-export default ({ 
-  imgSrc,
+export default ({
+  content,
+  isActiveBauble = false,
   animation = {},
   interaction = () => ({})
-}) => (
-  <animated.img
-    {...interaction()}
-    className='bauble'
-    style={{ ...animation }}
-    src={imgSrc}
-  />
-)
+}) => {
+
+  const { imgSrc, accentColor } = BAUBLES[content];
+  return (
+    <animated.img
+      className='bauble'
+      src={imgSrc}
+      style={{
+        border: isActiveBauble ? `6px solid ${accentColor}` : 'transparent',
+        cursor: isActiveBauble ? 'grabbing' : 'grab',
+        ...animation
+      }}
+      {...interaction()}
+    />
+  )
+
+}
