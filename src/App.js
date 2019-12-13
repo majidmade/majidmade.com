@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Background activeBauble={activeBauble} />
-      { activeBauble ? <TitleText activeBauble={activeBauble}/> : null }
+      <TitleText activeBauble={activeBauble}/>
       <div className='bauble-container'>
         <Bauble content={AVATAR} isActiveBauble={activeBauble === AVATAR} {...useDrag(AVATAR)} />
         <Bauble content={VCU} isActiveBauble={activeBauble === VCU} {...useDrag(VCU)} />
