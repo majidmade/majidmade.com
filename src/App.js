@@ -17,10 +17,10 @@ function App() {
       <Background activeBauble={activeBauble} />
       <TitleText activeBauble={activeBauble}/>
       <div className='bauble-container'>
-        <Bauble content={AVATAR} isActiveBauble={activeBauble === AVATAR} {...useDrag(AVATAR)} />
-        <Bauble content={VCU} isActiveBauble={activeBauble === VCU} {...useDrag(VCU)} />
-        <Bauble content={SAGE} isActiveBauble={activeBauble === SAGE} {...useDrag(SAGE)} />
-        <Bauble content={PIVOTAL} isActiveBauble={activeBauble === PIVOTAL} {...useDrag(PIVOTAL)} />
+        <Bauble bauble={AVATAR} activeBauble={activeBauble} {...useDrag(AVATAR)} />
+        <Bauble bauble={VCU} activeBauble={activeBauble} {...useDrag(VCU)} />
+        <Bauble bauble={SAGE} activeBauble={activeBauble} {...useDrag(SAGE)} />
+        <Bauble bauble={PIVOTAL} activeBauble={activeBauble} {...useDrag(PIVOTAL)} />
       </div>
     </div>
   );

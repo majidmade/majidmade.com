@@ -3,13 +3,14 @@ import { animated } from 'react-spring';
 import { IMAGES, COLORS } from '../content';
 
 export default ({
-  content,
-  isActiveBauble = false,
+  bauble,
+  activeBauble,
   animation = {},
   interaction = () => ({})
 }) => {
-  const { imgSrc } = IMAGES[content];
-  const { backgroundColor } = COLORS[content];
+  const isActiveBauble = bauble === activeBauble;
+  const { imgSrc } = IMAGES[bauble];
+  const { backgroundColor } = COLORS[bauble];
   return (
     <animated.img
       className='bauble'
