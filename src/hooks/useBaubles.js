@@ -1,7 +1,7 @@
 import { useSpring } from 'react-spring';
 import { useGesture } from 'react-with-gesture';
 
-export default setActiveBauble => bauble => {
+export default (bauble, setActiveBauble) => {
   const [{ xy }, setXY] = useSpring(() => ({ xy: [0, 0] }))
   const interaction = useGesture(({ event, down, delta }) => {
     event.preventDefault()

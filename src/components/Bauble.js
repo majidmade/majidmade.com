@@ -1,16 +1,15 @@
 import React from 'react';
 import { animated } from 'react-spring';
 import { IMAGES, COLORS } from '../content';
+import useDrag from '../hooks/useBaubles'
 
-export default ({
-  bauble,
-  activeBauble,
-  animation = {},
-  interaction = () => ({})
-}) => {
-  const isActiveBauble = bauble === activeBauble;
+export default ({ bauble, baubleState }) => {
+  const [ activeBauble, setActiveBauble ] = baubleState;
+  const { animation, interaction } = useDrag(bauble, setActiveBauble);
   const { imgSrc } = IMAGES[bauble];
   const { backgroundColor } = COLORS[bauble];
+  const isActiveBauble = bauble === activeBauble;
+
   return (
     <animated.img
       className='bauble'
