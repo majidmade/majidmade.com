@@ -8,7 +8,6 @@ export default ({
   animation = {},
   interaction = () => ({})
 }) => {
-
   const { imgSrc, accentColor } = BAUBLES[content];
   return (
     <animated.img

@@ -8,10 +8,9 @@ export default setActiveBauble => bauble => {
     setXY({ xy: down ? delta : [0,0] })
     setActiveBauble(down ? bauble : null)
   })
-
   return {
     animation: { 
-      transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`),
+      transform: xy.interpolate((x, y) => `translate(${x}px,${y}px)`),
     },
     interaction
   }
