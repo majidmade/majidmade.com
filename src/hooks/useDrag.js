@@ -6,7 +6,7 @@ export default setActiveBauble => bauble => {
   const interaction = useGesture(({ event, down, delta }) => {
     event.preventDefault()
     setXY({ xy: down ? delta : [0,0] })
-    setActiveBauble(down ? bauble : null)
+    setActiveBauble(bauble)
   })
   return {
     animation: { 
