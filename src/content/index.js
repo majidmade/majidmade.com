@@ -13,7 +13,7 @@ export const IMAGES = {
 };
 
 export const COLORS = {
-  [AVATAR]: { backgroundColor: 'rgb(31, 17, 22)', textColor: 'white' },
+  [AVATAR]: { backgroundColor: 'rgb(130, 49, 35)', textColor: 'white' },
   [VCU]: { backgroundColor: 'rgb(252, 171, 18)', textColor: 'black' },
   [SAGE]: { backgroundColor: 'rgb(3, 38, 56)', textColor: 'white' },
   [PIVOTAL]: { backgroundColor: '#b2f1e8', textColor: 'black' },
