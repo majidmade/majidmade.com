@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "scp": "yarn build && scp -r -i ${LITHIUM_KEY} ~/workspace/majidmade.com/build/* ${LITHIUM_USER}:~/public_html/"
   },
   "eslintConfig": {
     "extends": "react-app"
