@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import Background from './components/Background';
 import Bauble from './components/Bauble';
-import TitleText from './components/TitleText';
+import Title from './components/Title';
 import baubles from './content';
 
 const { AVATAR, VCU, SAGE, PIVOTAL } = baubles;
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <div>
         <Background activeBauble={activeBauble} />
-        <TitleText activeBauble={activeBauble} />
+        <Title activeBauble={activeBauble} />
         <div className='bauble-container'>
           <Bauble bauble={AVATAR} baubleState={baubleState} />
           <Bauble bauble={VCU} baubleState={baubleState} />
