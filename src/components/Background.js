@@ -2,8 +2,8 @@ import React from 'react';
 import { animated } from 'react-spring';
 import useColor from '../hooks/useColor';
 
-export default ({ activeBauble }) => {
-  const { backgroundColor } = useColor(activeBauble);
+export default ({ activeContent }) => {
+  const { backgroundColor } = useColor(activeContent);
   return (
     <animated.div
       style={{

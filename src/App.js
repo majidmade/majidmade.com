@@ -4,24 +4,24 @@ import Background from './components/Background';
 import Bauble from './components/Bauble';
 import Title from './components/Title';
 import useFadeIn from './hooks/useFadeIn';
-import baubles from './content';
+import content from './content';
 
 function App() {
-  const baubleState = useState(null);
-  const [activeBauble] = baubleState;
-  const fadeIns = useFadeIn(activeBauble);
+  const contentState = useState(null);
+  const [activeContent] = contentState;
+  const fadeIns = useFadeIn(activeContent);
 
   return (
     <div className="App">
       <div>
-        <Background activeBauble={activeBauble} />
-        <Title activeBauble={activeBauble} />
+        <Background activeContent={activeContent} />
+        <Title activeContent={activeContent} />
         <div className='bauble-container'>
           { fadeIns.map((f, i) => (
             <Bauble
-              key={baubles[i].toString()}
-              bauble={baubles[i]}
-              baubleState={baubleState}
+              key={content[i].toString()}
+              content={content[i]}
+              contentState={contentState}
               fadeStyles={f}
             />
           )) }

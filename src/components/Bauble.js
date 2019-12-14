@@ -3,9 +3,9 @@ import { animated } from 'react-spring';
 import { IMAGES } from '../content';
 import useDrag from '../hooks/useDrag'
 
-export default ({ bauble, baubleState, fadeStyles }) => {
-  const { dragStyles, bindDragInteraction } = useDrag(bauble, baubleState);
-  const { imgSrc } = IMAGES[bauble];
+export default ({ content, contentState, fadeStyles }) => {
+  const { dragStyles, bindDragInteraction } = useDrag(content, contentState);
+  const { imgSrc } = IMAGES[content];
 
   return (
     <animated.img

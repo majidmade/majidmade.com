@@ -1,12 +1,12 @@
 import { useSpring } from 'react-spring';
 import { COLORS } from '../content';
 
-export default activeBauble => {
+export default activeContent => {
   const [{ backgroundColor }, setBackgroundColor] = useSpring(() => ({ backgroundColor: 'rgb(210, 210, 210)' }))
   const [{ textColor }, setTextColor] = useSpring(() => ({ textColor: 'white' }))
-  if (activeBauble) {
-    setBackgroundColor({ backgroundColor:  COLORS[activeBauble].backgroundColor });
-    setTextColor({ textColor:  COLORS[activeBauble].textColor });
+  if (activeContent) {
+    setBackgroundColor({ backgroundColor:  COLORS[activeContent].backgroundColor });
+    setTextColor({ textColor:  COLORS[activeContent].textColor });
   }
   return { backgroundColor, textColor }
 }

@@ -1,3 +1,1 @@
-adding some spice to majidmade.com and/or an excuse to play around with some new libraries
-
-why did i commit to the "bauble" metaphor so hard? 😭
+adding some spice to majidmade.com and/or let's be honest just an excuse to play around with some new libraries
