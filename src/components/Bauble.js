@@ -4,8 +4,7 @@ import { IMAGES } from '../content';
 import useDrag from '../hooks/useDrag'
 
 export default ({ bauble, baubleState }) => {
-  const [ , setActiveBauble ] = baubleState;
-  const { dragStyles, bindDragInteraction } = useDrag(bauble, setActiveBauble);
+  const { dragStyles, bindDragInteraction } = useDrag(bauble, baubleState);
   const { imgSrc } = IMAGES[bauble];
 
   return (
