@@ -5,7 +5,7 @@ import useDrag from '../hooks/useDrag'
 
 export default ({ bauble, baubleState }) => {
   const [ activeBauble, setActiveBauble ] = baubleState;
-  const { animation, interaction } = useDrag(bauble, setActiveBauble);
+  const { dragStyles, bindDragInteraction } = useDrag(bauble, setActiveBauble);
   const { imgSrc } = IMAGES[bauble];
   const { backgroundColor } = COLORS[bauble];
   const isActiveBauble = bauble === activeBauble;
@@ -17,9 +17,9 @@ export default ({ bauble, baubleState }) => {
       style={{
         border: isActiveBauble ? `6px solid ${backgroundColor}` : 'transparent',
         cursor: isActiveBauble ? 'grabbing' : 'grab',
-        ...animation
+        ...dragStyles
       }}
-      {...interaction()}
+      {...bindDragInteraction()}
     />
   )
 
