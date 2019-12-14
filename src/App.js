@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import Background from './components/Background';
 import Bauble from './components/Bauble';
 import Title from './components/Title';
+import useFadeIn from './hooks/useFadeIn';
 import baubles from './content';
-
-const { AVATAR, VCU, SAGE, PIVOTAL } = baubles;
 
 function App() {
   const baubleState = useState(null);
   const [activeBauble] = baubleState;
+  const fadeIns = useFadeIn(activeBauble);
 
   return (
     <div className="App">
@@ -17,10 +17,14 @@ function App() {
         <Background activeBauble={activeBauble} />
         <Title activeBauble={activeBauble} />
         <div className='bauble-container'>
-          <Bauble bauble={AVATAR} baubleState={baubleState} />
-          <Bauble bauble={VCU} baubleState={baubleState} />
-          <Bauble bauble={SAGE} baubleState={baubleState} />
-          <Bauble bauble={PIVOTAL} baubleState={baubleState} />
+          { fadeIns.map((f, i) => (
+            <Bauble
+              key={baubles[i].toString()}
+              bauble={baubles[i]}
+              baubleState={baubleState}
+              fadeStyles={f}
+            />
+          )) }
         </div>
       </div>
     </div>

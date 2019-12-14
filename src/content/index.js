@@ -3,7 +3,7 @@ const VCU = Symbol('VCU');
 const SAGE = Symbol('SAGE');
 const PIVOTAL = Symbol('PIVOTAL');
 
-export default { AVATAR, VCU, SAGE, PIVOTAL }
+export default [ AVATAR, VCU, SAGE, PIVOTAL ]
 
 export const IMAGES = {
   [AVATAR]: { imgSrc: '/avatar.jpg' },
