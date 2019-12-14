@@ -1,7 +1,7 @@
 import React from 'react';
 import { animated } from 'react-spring';
 import { IMAGES, COLORS } from '../content';
-import useDrag from '../hooks/useBaubles'
+import useDrag from '../hooks/useDrag'
 
 export default ({ bauble, baubleState }) => {
   const [ activeBauble, setActiveBauble ] = baubleState;
