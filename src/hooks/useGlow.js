@@ -11,12 +11,12 @@ export default (content, activeContent, setActiveContent) => {
   const [{ vh }, setVH ] = useSpring(() => ({ vh: '0vh' }))
   const bindGlowInteraction = useGesture({
     onHover: ({ hovering }) => {
-      setVH({ vh: hovering ? '3vh' : '1vh' })
+      setVH({ vh: hovering ? '2vh' : '1vh' })
       setIsHovered(hovering)
     },
     onDrag: ({ down, event, first, last }) => {
       first && event.preventDefault()
-      setVH({ vh: down ? '3vh' : '1vh' })
+      setVH({ vh: down ? '2vh' : '1vh' })
       setIsGrabbed(down && !last)
       setActiveContent(content)
     },
