@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSpring } from 'react-spring';
-import { useGesture } from 'react-with-gesture';
+import { useDrag } from 'react-use-gesture';
 import { COLORS } from '../content';
 
 export default (content, contentState) => {
@@ -8,9 +8,9 @@ export default (content, contentState) => {
   const [isGrabbed, setIsGrabbed] = useState(false)
   const [{ xy }, setXY ] = useSpring(() => ({ xy: [0, 0] }))
   const [{ vh }, setVH ] = useSpring(() => ({ vh: '0vh' }))
-  const bindDragInteraction = useGesture(({ event, down, delta, first }) => {
+  const bindDragInteraction = useDrag(({ event, down, movement, first }) => {
     first && event.preventDefault()
-    setXY({ xy: down ? delta : [0,0] })
+    setXY({ xy: down ? movement : [0,0] })
     setVH({ vh: down ? '4vh' : '1vh' })
     setActiveContent(content)
     setIsGrabbed(down)
