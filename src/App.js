@@ -1,15 +1,21 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Background from './components/Background';
 import Bauble from './components/Bauble';
 import Title from './components/Title';
 import useFadeIn from './hooks/useFadeIn';
+import useBounce from './hooks/useBounce';
 import content from './content';
 
 function App() {
   const contentState = useState(null);
   const [activeContent] = contentState;
-  const fadeIns = useFadeIn(activeContent);
+  const fades = useFadeIn(activeContent);
+  const bounces = useBounce();
+
+  const baubles = useMemo(() => content.map((c, i) => [
+    c, fades[i], bounces[i]
+  ]), [bounces, fades])
 
   return (
     <div className="App">
@@ -17,12 +23,13 @@ function App() {
         <Background activeContent={activeContent} />
         <Title activeContent={activeContent} />
         <div className='bauble-container'>
-          { fadeIns.map((f, i) => (
+          { baubles.map(([content, fade, bounce]) => (
             <Bauble
-              key={content[i].toString()}
-              content={content[i]}
+              key={content.toString()}
+              content={content}
               contentState={contentState}
-              fadeStyles={f}
+              fadeStyles={fade}
+              bounceStyles={bounce}
             />
           )) }
         </div>
