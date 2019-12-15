@@ -1,9 +1,8 @@
 import { useSprings } from 'react-spring';
-import content from '../content';
 
-export default () => {
-  const [ transform ] = useSprings(
-    content.length,
+export default n => {
+  const [ transformSprings ] = useSprings(
+    n,
     i => ({
       from: { transform: 'translate(0, -10vh)' },
       to: { transform: 'translate(0, 0vh)' },
@@ -12,5 +11,5 @@ export default () => {
     })
   )
 
-  return transform;
+  return transformSprings;
 }

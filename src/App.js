@@ -3,14 +3,14 @@ import React, { useState, useMemo } from 'react';
 import Background from './components/Background';
 import Bauble from './components/Bauble';
 import Title from './components/Title';
-import useFadeIn from './hooks/useFadeIn';
-import useBounce from './hooks/useBounce';
+import useFadeIns from './hooks/useFadeIns';
+import useBounces from './hooks/useBounces';
 import content from './content';
 
 function App() {
   const [activeContent, setActiveContent] = useState(null);
-  const fades = useFadeIn();
-  const bounces = useBounce();
+  const fades = useFadeIns(content.length);
+  const bounces = useBounces(content.length);
 
   const baubles = useMemo(() => content.map((c, i) => [
     c, fades[i], bounces[i]
