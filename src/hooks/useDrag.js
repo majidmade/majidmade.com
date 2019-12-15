@@ -8,8 +8,8 @@ export default (content, contentState) => {
   const [isGrabbed, setIsGrabbed] = useState(false)
   const [{ xy }, setXY ] = useSpring(() => ({ xy: [0, 0] }))
   const [{ vh }, setVH ] = useSpring(() => ({ vh: '0vh' }))
-  const bindDragInteraction = useGesture(({ event, down, delta }) => {
-    event.preventDefault()
+  const bindDragInteraction = useGesture(({ event, down, delta, first }) => {
+    first && event.preventDefault()
     setXY({ xy: down ? delta : [0,0] })
     setVH({ vh: down ? '4vh' : '1vh' })
     setActiveContent(content)
