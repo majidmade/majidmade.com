@@ -5,7 +5,7 @@ export default n => useSprings(
   i => ({
     from: { transform: 'translate(0, -10vh)' },
     to: { transform: 'translate(0, 0vh)' },
-    config: { mass: 1, tension: 120, friction: 3, velocity: 10 },
+    config: { mass: 1, tension: 120, friction: 6, velocity: 5 },
     delay: () => i * 70
   })
 )
