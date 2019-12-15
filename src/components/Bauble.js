@@ -1,17 +1,17 @@
 import React from 'react';
 import { animated } from 'react-spring';
 import { IMAGES } from '../content';
-import useDrag from '../hooks/useDrag'
+import useGlow from '../hooks/useGlow'
 
-export default ({ content, contentState, fadeStyles, bounceStyles }) => {
-  const { dragStyles, bindDragInteraction } = useDrag(content, contentState);
+export default ({ content, activeContent, setActiveContent, fadeStyles, bounceStyles }) => {
+  const { glowStyles, bindGlowInteraction } = useGlow(content, activeContent, setActiveContent);
   const { imgSrc } = IMAGES[content];
   return (
     <animated.img
       className='bauble'
       src={imgSrc}
-      style={{  ...fadeStyles, ...dragStyles, ...bounceStyles }}
-      {...bindDragInteraction()}
+      style={{  ...fadeStyles, ...glowStyles, ...bounceStyles }}
+      {...bindGlowInteraction()}
     />
   )
 

@@ -13,10 +13,10 @@ export const IMAGES = {
 };
 
 export const COLORS = {
-  [AVATAR]: { backgroundColor: 'rgb(130, 49, 35)', textColor: 'white' },
-  [VCU]: { backgroundColor: 'rgb(252, 171, 18)', textColor: 'black' },
-  [SAGE]: { backgroundColor: 'rgb(3, 38, 56)', textColor: 'white' },
-  [PIVOTAL]: { backgroundColor: '#b2f1e8', textColor: 'black' },
+  [AVATAR]: { backgroundColor: 'rgb(130, 49, 35)', textColor: 'white', glowColor: 'rgb(20, 12, 14)' },
+  [VCU]: { backgroundColor: 'rgb(252, 171, 18)', textColor: 'black', glowColor: 'black' },
+  [SAGE]: { backgroundColor: 'rgb(3, 38, 56)', textColor: 'white', glowColor: 'rgb(29, 218, 9)' },
+  [PIVOTAL]: { backgroundColor: '#b2f1e8', textColor: 'black', glowColor: 'rgb(22, 169, 144)' },
 }
 
 export const TITLES = {

@@ -8,9 +8,8 @@ import useBounce from './hooks/useBounce';
 import content from './content';
 
 function App() {
-  const contentState = useState(null);
-  const [activeContent] = contentState;
-  const fades = useFadeIn(activeContent);
+  const [activeContent, setActiveContent] = useState(null);
+  const fades = useFadeIn();
   const bounces = useBounce();
 
   const baubles = useMemo(() => content.map((c, i) => [
@@ -27,7 +26,8 @@ function App() {
             <Bauble
               key={content.toString()}
               content={content}
-              contentState={contentState}
+              activeContent={activeContent}
+              setActiveContent={setActiveContent}
               fadeStyles={fade}
               bounceStyles={bounce}
             />
