@@ -1,15 +1,16 @@
 import { useSprings } from 'react-spring';
 
-export default n => {
-  const [ transformSprings ] = useSprings(
-    n,
-    i => ({ 
-      from: { opacity: 0 },
-      to: { opacity: 1 },
-      config: { duration: 1500 },
-      delay: () => i * 70
-    })
-  )
+const useFades = ({ reverse, count }) => useSprings(
+  count,
+  i => ({ 
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    reverse,
+    config: { duration: 1500 },
+    delay: () => i * 70,
+    reset: true
+  })
+)
 
-  return transformSprings;
-}
+export const useFadeIns = count => useFades({ reverse: false, count })
+export const useFadeOuts = count => useFades({ reverse: true, count })
