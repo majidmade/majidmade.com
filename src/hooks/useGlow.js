@@ -3,7 +3,7 @@ import { useSpring } from 'react-spring';
 import { useGesture } from 'react-use-gesture';
 import { COLORS } from '../content';
 
-export default (content, activeContent, setActiveContent) => {
+export default (content, activeContent) => {
   const { backgroundColor, glowColor } = useMemo(() => COLORS[content], [content]);
   const isActiveContent = content === activeContent;
   const [isGrabbed, setIsGrabbed] = useState(false)
@@ -18,7 +18,6 @@ export default (content, activeContent, setActiveContent) => {
       first && event.preventDefault()
       setVH({ vh: down ? '2vh' : '1vh' })
       setIsGrabbed(down && !last)
-      setActiveContent(content)
     },
   })
 
