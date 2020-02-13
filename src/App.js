@@ -2,7 +2,6 @@ import './App.css';
 import React, { useState, useMemo } from 'react';
 import Background from './components/Background';
 import Bauble from './components/Bauble';
-import Bullets from './components/Bullets';
 import Title from './components/Title';
 import { useFadeIns } from './hooks/useFadeIns';
 import useBounces from './hooks/useBounces';
@@ -22,7 +21,6 @@ function App() {
       <div>
         <Background activeContent={activeContent} />
         <Title activeContent={activeContent} />
-        <Bullets activeContent={activeContent} />
         <div className='bauble-container'>
           { baubles.map(([content, fade, bounce]) => (
             <Bauble

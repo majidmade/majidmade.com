@@ -10,7 +10,7 @@ export const IMAGES = {
   [VCU]: { imgSrc: '/vcu.png' },
   [SAGE]: { imgSrc: '/sage.png' },
   [PIVOTAL]: { imgSrc: '/pivotal.png' },
-}
+};
 
 export const COLORS = {
   [AVATAR]: { backgroundColor: 'rgb(130, 49, 35)', textColor: 'white', glowColor: 'rgb(20, 12, 14)' },
@@ -24,19 +24,4 @@ export const TITLES = {
   [VCU]: { title: 'VCU', subtitle: '🎓 Philosophy' },
   [SAGE]: { title: 'Sage', subtitle: '💸 Software Engineer' },
   [PIVOTAL]: { title: 'Pivotal', subtitle: '☁️ Software Engineer' },
-}
-
-export const BULLETS = {
-  [AVATAR]: [
-    
-  ],
-  [VCU]: [
-    
-  ],
-  [SAGE]: [
-    
-  ],
-  [PIVOTAL]: [
-    
-  ],
 }
