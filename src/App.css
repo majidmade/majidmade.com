@@ -31,3 +31,12 @@
   margin: 4px;
   border-radius: 50%;
 }
+
+.social-media {
+  display: flex;
+  justify-content: center
+}
+
+.social-media-icon {
+  margin: 2px;
+}

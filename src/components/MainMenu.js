@@ -13,7 +13,7 @@ export default ({ setActiveContent }) => {
   ]), [bounces, fades]);
 
   return (
-    <div className='menu-icon-container'>
+    <div className='main-menu'>
       {icons.map(([content, fade, bounce]) => (
         <MenuIcon
           key={content.toString()}

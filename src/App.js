@@ -4,6 +4,7 @@ import { ContentContext } from './content';
 import Background from './components/Background';
 import ActiveContent from './components/ActiveContent';
 import MainMenu from './components/MainMenu';
+import SocialMedia from './components/SocialMedia';
 
 function App() {
   const [activeContent, setActiveContent] = useState(null);
@@ -14,6 +15,7 @@ function App() {
           <Background/>
           <ActiveContent/>
           <MainMenu setActiveContent={setActiveContent}/>
+          <SocialMedia/>
         </ContentContext.Provider>
       </div>
     </div>
