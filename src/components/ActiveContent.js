@@ -8,7 +8,7 @@ export default () => {
   const { title, subtitle } = TITLES[activeContent] || { title: '', subtitle: '' }
   const { textColor } = useColor(activeContent);
   return (
-    <animated.div style={{ color: textColor }}>
+    <animated.div className="active-content" style={{ color: textColor }}>
       <h1>{title}</h1>
       <h3>{subtitle}</h3>
     </animated.div>

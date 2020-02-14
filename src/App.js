@@ -9,7 +9,7 @@ function App() {
   const [activeContent, setActiveContent] = useState(null);
   return (
     <div className="App">
-      <div>
+      <div className="center-column">
         <ContentContext.Provider value={activeContent}>
           <Background/>
           <ActiveContent/>
