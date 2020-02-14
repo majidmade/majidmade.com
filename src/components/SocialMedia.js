@@ -20,7 +20,7 @@ export default () => {
             className='social-media-icon'
             style={{...fade, ...bounce }}
           >
-            <SocialIcon url={url}/>
+            <SocialIcon url={url} fgColor='white'/>
           </animated.span>
         ))
       }  
