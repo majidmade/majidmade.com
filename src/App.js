@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import { ContentContext } from './content';
 import Background from './components/Background';
-import Title from './components/Title';
+import ActiveContent from './components/ActiveContent';
 import MainMenu from './components/MainMenu';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <div>
         <ContentContext.Provider value={activeContent}>
           <Background/>
-          <Title/>
+          <ActiveContent/>
           <MainMenu setActiveContent={setActiveContent}/>
         </ContentContext.Provider>
       </div>
