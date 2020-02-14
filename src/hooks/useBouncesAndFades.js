@@ -7,6 +7,6 @@ export default items => {
   const [bounces] = useBounces(items.length);
   const itemsWithAnimations = useMemo(() => items.map((item, i) => [
     item, fades[i], bounces[i]
-  ]), [bounces, fades]);
+  ]), [items, bounces, fades]);
   return itemsWithAnimations
 }
