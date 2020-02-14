@@ -1,11 +1,10 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import MenuIcon from './MenuIcon';
 import { useFadeIns } from '../hooks/useFadeIns';
 import useBounces from '../hooks/useBounces';
-import { ContentContext, allContent } from '../content';
+import { allContent } from '../content';
 
 export default ({ setActiveContent }) => {
-  const activeContent = useContext(ContentContext);
   const [fades] = useFadeIns(allContent.length);
   const [bounces] = useBounces(allContent.length);
 
@@ -19,7 +18,6 @@ export default ({ setActiveContent }) => {
         <MenuIcon
           key={content.toString()}
           content={content}
-          activeContent={activeContent}
           setActiveContent={setActiveContent}
           fadeStyles={fade}
           bounceStyles={bounce}

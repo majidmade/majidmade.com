@@ -1,9 +1,10 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useContext } from 'react';
 import { animated } from 'react-spring';
-import { IMAGES } from '../content';
+import { ContentContext, IMAGES } from '../content';
 import useGlow from '../hooks/useGlow'
 
-export default ({ content, activeContent, setActiveContent, fadeStyles, bounceStyles }) => {
+export default ({ content, setActiveContent, fadeStyles, bounceStyles }) => {
+  const activeContent = useContext(ContentContext);
   const { glowStyles, bindGlowInteraction } = useGlow(content, activeContent, setActiveContent);
   const setActiveContentToContent = useCallback(() => 
     setActiveContent(content),
