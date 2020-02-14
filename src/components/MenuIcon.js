@@ -13,7 +13,7 @@ export default ({ content, activeContent, setActiveContent, fadeStyles, bounceSt
   const { imgSrc } = IMAGES[content];
   return (
     <animated.img
-      className='bauble'
+      className='menu-icon'
       src={imgSrc}
       style={{  ...fadeStyles, ...glowStyles, ...bounceStyles }}
       onClick={setActiveContentToContent}
