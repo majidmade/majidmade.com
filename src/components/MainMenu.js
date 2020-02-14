@@ -1,10 +1,10 @@
 import React from 'react';
 import MenuIcon from './MenuIcon';
 import useBouncesAndFades from '../hooks/useBouncesAndFades.js';
-import { allContent } from '../content';
+import { ALL_CONTENT } from '../content';
 
 export default ({ setActiveContent }) => {
-  const icons = useBouncesAndFades(allContent);
+  const icons = useBouncesAndFades(ALL_CONTENT);
   return (
     <div className='main-menu'>
       {icons.map(([content, fade, bounce]) => (

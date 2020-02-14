@@ -7,7 +7,7 @@ const PIVOTAL = Symbol('PIVOTAL');
 const VMWARE = Symbol('VMWARE');
 const FALLBACK = Symbol('DONTEXPORTME');
 
-export const allContent = [ AVATAR, VCU, SAGE, PIVOTAL, VMWARE ];
+export const ALL_CONTENT = [ AVATAR, VCU, SAGE, PIVOTAL, VMWARE, ];
 
 export const ContentContext = createContext(null);
 
