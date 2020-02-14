@@ -13,16 +13,16 @@
   justify-content: flex-end;
 }
 
-/* .active-content {
-  
-} */
-
 .active-content > h1 {
   margin-bottom: 1px;
 }
 
 .active-content > h3 {
   margin-top: 1px;
+}
+
+.active-content > p {
+  max-width: 400px;
 }
 
 .menu-icon {
