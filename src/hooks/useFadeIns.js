@@ -1,6 +1,6 @@
 import { useSprings } from 'react-spring';
 
-export const useFadeIns = (count, delay = 70) => useSprings(
+export default (count, delay = 70) => useSprings(
   count,
   i => ({ 
     from: { opacity: 0 },

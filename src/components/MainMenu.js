@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import MenuIcon from './MenuIcon';
-import { useFadeIns } from '../hooks/useFadeIns';
+import useFadeIns from '../hooks/useFadeIns';
 import useBounces from '../hooks/useBounces';
 import { allContent } from '../content';
 

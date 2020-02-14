@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { animated } from 'react-spring';
 import useColor from '../hooks/useColor';
-import { useFadeIns } from '../hooks/useFadeIns';
+import useFadeIns from '../hooks/useFadeIns';
 import { ContentContext } from '../content';
 
 export default () => {
