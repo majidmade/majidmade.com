@@ -1,17 +1,10 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import MenuIcon from './MenuIcon';
-import useFadeIns from '../hooks/useFadeIns';
-import useBounces from '../hooks/useBounces';
+import useBouncesAndFades from '../hooks/useBouncesAndFades.js';
 import { allContent } from '../content';
 
 export default ({ setActiveContent }) => {
-  const [fades] = useFadeIns(allContent.length);
-  const [bounces] = useBounces(allContent.length);
-
-  const icons = useMemo(() => allContent.map((c, i) => [
-    c, fades[i], bounces[i]
-  ]), [bounces, fades]);
-
+  const icons = useBouncesAndFades(allContent);
   return (
     <div className='main-menu'>
       {icons.map(([content, fade, bounce]) => (

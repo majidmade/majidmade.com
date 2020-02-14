@@ -1,8 +1,7 @@
-import React, {useMemo} from 'react';
+import React from 'react';
 import { animated } from 'react-spring';
 import { SocialIcon } from 'react-social-icons';
-import useFadeIns from '../hooks/useFadeIns';
-import useBounces from '../hooks/useBounces';
+import useBouncesAndFades from '../hooks/useBouncesAndFades.js';
 
 const SOCIAL_LINKS = [
   'https://www.twitter.com/majidrazvi',
@@ -11,12 +10,7 @@ const SOCIAL_LINKS = [
 ]
 
 export default () => {
-  const [fades] = useFadeIns(SOCIAL_LINKS.length);
-  const [bounces] = useBounces(SOCIAL_LINKS.length);
-
-  const icons = useMemo(() => SOCIAL_LINKS.map((url, i) => [
-    url, fades[i], bounces[i]
-  ]), [bounces, fades]);
+  const icons = useBouncesAndFades(SOCIAL_LINKS);
   return (
     <div className='social-media'>
       {
