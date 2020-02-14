@@ -1,10 +1,11 @@
-import React, { useMemo } from 'react';
+import React, { useContext, useMemo } from 'react';
 import Bauble from './Bauble';
 import { useFadeIns } from '../hooks/useFadeIns';
 import useBounces from '../hooks/useBounces';
-import allContent from '../content';
+import { ContentContext, allContent } from '../content';
 
-export default ({ activeContent, setActiveContent }) => {
+export default ({ setActiveContent }) => {
+  const activeContent = useContext(ContentContext);
   const [fades] = useFadeIns(allContent.length);
   const [bounces] = useBounces(allContent.length);
 

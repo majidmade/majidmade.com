@@ -1,3 +1,5 @@
+import { createContext } from 'react';
+
 const AVATAR = Symbol('AVATAR');
 const VCU = Symbol('VCU');
 const SAGE = Symbol('SAGE');
@@ -5,7 +7,9 @@ const PIVOTAL = Symbol('PIVOTAL');
 const VMWARE = Symbol('VMWARE');
 const FALLBACK = Symbol('DONTEXPORTME');
 
-export default [ AVATAR, VCU, SAGE, PIVOTAL, VMWARE ]
+export const allContent = [ AVATAR, VCU, SAGE, PIVOTAL, VMWARE ];
+
+export const ContentContext = createContext(null);
 
 // dev QoL
 const withFallback = {
