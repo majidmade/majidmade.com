@@ -39,7 +39,7 @@ export const TITLES = new Proxy({
   [VCU]: { title: 'VCU', subtitle: '🎓 Philosophy' },
   [SAGE]: { title: 'Sage', subtitle: '💸 Software Engineer' },
   [PIVOTAL]: { title: 'Pivotal', subtitle: '☁️ Software Engineer' },
-  [VMWARE]: { title: 'VMware', subtitle: '☁️ Software Engineer' },
+  [VMWARE]: { title: 'VMware', subtitle: '☸︎ Engineering Manager' },
   [FALLBACK]: { title: '', subtitle: '' },
 }, withFallback);
 
