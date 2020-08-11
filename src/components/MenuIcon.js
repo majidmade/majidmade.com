@@ -9,7 +9,7 @@ import { BouncePropType } from '../hooks/useBounces';
 const MenuIcon = ({ content, setActiveContent, fadeStyles, bounceStyles }) => {
 	const activeContent = useContext(ContentContext);
 	const { glowStyles, bindGlowInteraction } = useGlow(content, activeContent, setActiveContent);
-	const setActiveContentToContent = useCallback(() => 
+	const onClick = useCallback(() => 
 		setActiveContent(content),
 	[setActiveContent, content]
 	);
@@ -28,7 +28,7 @@ const MenuIcon = ({ content, setActiveContent, fadeStyles, bounceStyles }) => {
 			src={imgSrc}
 			alt={altText}
 			style={{  ...fadeStyles, ...glowStyles, ...bounceStyles }}
-			onClick={setActiveContentToContent}
+			onClick={onClick}
 			onContextMenu={disableRightClick}
 			{...bindGlowInteraction()}
 		/>

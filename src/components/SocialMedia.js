@@ -1,7 +1,7 @@
 import React from 'react';
 import { animated } from 'react-spring';
 import { SocialIcon } from 'react-social-icons';
-import useBouncesAndFades from '../hooks/useBouncesAndFades.js';
+import useMenuIcons from '../hooks/useMenuIcons.js';
 
 const SOCIAL_LINKS = [
 	'https://www.twitter.com/majidrazvi',
@@ -10,7 +10,7 @@ const SOCIAL_LINKS = [
 ];
 
 const SocialMedia = () => {
-	const icons = useBouncesAndFades(SOCIAL_LINKS);
+	const icons = useMenuIcons(SOCIAL_LINKS);
 	return (
 		<div className='social-media'>
 			{
