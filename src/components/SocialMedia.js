@@ -4,26 +4,28 @@ import { SocialIcon } from 'react-social-icons';
 import useBouncesAndFades from '../hooks/useBouncesAndFades.js';
 
 const SOCIAL_LINKS = [
-  'https://www.twitter.com/majidrazvi',
-  'https://www.linkedin.com/in/majidrazvi',
-  'https://github.com/majidmade/majidmade.com/tree/master/src',
-]
+	'https://www.twitter.com/majidrazvi',
+	'https://www.linkedin.com/in/majidrazvi',
+	'https://github.com/majidmade/majidmade.com/tree/master/src',
+];
 
-export default () => {
-  const icons = useBouncesAndFades(SOCIAL_LINKS);
-  return (
-    <div className='social-media'>
-      {
-        icons.map(([url, fade, bounce], i) => (
-          <animated.span
-            key={`${i}-social-link`}
-            className='social-media-icon'
-            style={{...fade, ...bounce }}
-          >
-            <SocialIcon url={url} fgColor='white'/>
-          </animated.span>
-        ))
-      }  
-    </div>
-  )
-}
+const SocialMedia = () => {
+	const icons = useBouncesAndFades(SOCIAL_LINKS);
+	return (
+		<div className='social-media'>
+			{
+				icons.map(([url, fade, bounce], i) => (
+					<animated.span
+						key={`${i}-social-link`}
+						className='social-media-icon'
+						style={{...fade, ...bounce }}
+					>
+						<SocialIcon url={url} fgColor='white'/>
+					</animated.span>
+				))
+			}  
+		</div>
+	);
+};
+
+export default SocialMedia;

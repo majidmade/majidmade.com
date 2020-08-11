@@ -1,21 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MenuIcon from './MenuIcon';
 import useBouncesAndFades from '../hooks/useBouncesAndFades.js';
 import { ALL_CONTENT } from '../content';
 
-export default ({ setActiveContent }) => {
-  const icons = useBouncesAndFades(ALL_CONTENT);
-  return (
-    <div className='main-menu'>
-      {icons.map(([content, fade, bounce]) => (
-        <MenuIcon
-          key={content.toString()}
-          content={content}
-          setActiveContent={setActiveContent}
-          fadeStyles={fade}
-          bounceStyles={bounce}
-        />
-      ))}
-    </div>
-  );
+const MainMenu = ({ setActiveContent }) => {
+	const icons = useBouncesAndFades(ALL_CONTENT);
+	return (
+		<div className='main-menu'>
+			{icons.map(([content, fade, bounce]) => (
+				<MenuIcon
+					key={content.toString()}
+					content={content}
+					setActiveContent={setActiveContent}
+					fadeStyles={fade}
+					bounceStyles={bounce}
+				/>
+			))}
+		</div>
+	);
 };
+
+MainMenu.propTypes = {
+	setActiveContent: PropTypes.func.isRequired
+};
+
+export default MainMenu;
