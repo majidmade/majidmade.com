@@ -8,7 +8,7 @@ const MainMenu = ({ setActiveContent }) => {
 	const icons = useBouncesAndFades(ALL_CONTENT);
 	return (
 		<div className='main-menu'>
-			{icons.map(([content, fade, bounce]) => (
+			{icons.map(({ item: content, fade, bounce }) => (
 				<MenuIcon
 					key={content.toString()}
 					content={content}

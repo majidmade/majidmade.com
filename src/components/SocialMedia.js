@@ -14,7 +14,7 @@ const SocialMedia = () => {
 	return (
 		<div className='social-media'>
 			{
-				icons.map(([url, fade, bounce], i) => (
+				icons.map(({ item: url, fade, bounce }, i) => (
 					<animated.span
 						key={`${i}-social-link`}
 						className='social-media-icon'
