@@ -1,36 +1,31 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { animated } from 'react-spring';
-import { ContentPropType, ContentContext, IMAGES } from '../content';
+import { ContentPropType, IMAGES } from '../content';
 import useGlow from '../hooks/useGlow';
+import useDisableContextMenu from '../hooks/useDisableContextMenu';
 import { FadePropType } from '../hooks/useFadeIns';
 import { BouncePropType } from '../hooks/useBounces';
 
 const MenuIcon = ({ content, setActiveContent, fadeStyles, bounceStyles }) => {
-	const activeContent = useContext(ContentContext);
-	const { glowStyles, bindGlowInteraction } = useGlow(content, activeContent, setActiveContent);
+	const { glowStyles, bindGlowInteraction } = useGlow(content);
+
 	const onClick = useCallback(() => 
 		setActiveContent(content),
-	[setActiveContent, content]
+		[setActiveContent, content]
 	);
-	const { imgSrc, altText } = IMAGES[content];
-	// so mobile doesnt try to download the images on long-press:
-	const disableRightClick = useCallback(e => {
-		e.preventDefault();
-		e.stopPropagation();
-		return false;
-	}, []);
 
-  
+	const disableContextMenu = useDisableContextMenu();
+
 	return (
 		<animated.img
 			className='menu-icon'
-			src={imgSrc}
-			alt={altText}
+			src={IMAGES[content].imgSrc}
+			alt={IMAGES[content].altText}
 			style={{  ...fadeStyles, ...glowStyles, ...bounceStyles }}
 			onClick={onClick}
-			onContextMenu={disableRightClick}
-			{...bindGlowInteraction()}
+			{ ...disableContextMenu }
+			{ ...bindGlowInteraction() }
 		/>
 	);
 

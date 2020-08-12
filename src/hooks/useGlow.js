@@ -1,10 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useState, useContext, useMemo } from 'react';
 import { useSpring } from 'react-spring';
 import { useGesture } from 'react-use-gesture';
-import { COLORS } from '../content';
+import { ContentContext, COLORS } from '../content';
 
-export default (content, activeContent) => {
+export default content => {
 	const { backgroundColor, glowColor } = useMemo(() => COLORS[content], [content]);
+	const activeContent = useContext(ContentContext);
 	const isActiveContent = content === activeContent;
 	const [isGrabbed, setIsGrabbed] = useState(false);
 	const [isHovered, setIsHovered] = useState(false);
@@ -22,11 +23,10 @@ export default (content, activeContent) => {
 	});
 
 	const showBoxShadow = isGrabbed || isHovered || isActiveContent;
-	const boxShadowColor = isActiveContent ? glowColor : backgroundColor;
 	return {
 		glowStyles: { 
 			boxShadow: showBoxShadow
-				? vh.interpolate(vh => `0 0 ${vh} ${vh} ${boxShadowColor}`)
+				? vh.interpolate(vh => `0 0 ${vh} ${vh} ${isActiveContent ? glowColor : backgroundColor}`)
 				: '',
 			cursor: isGrabbed ? 'grabbing' : 'grab',
 			zIndex: showBoxShadow ? 1 : 0
