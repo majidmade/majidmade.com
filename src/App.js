@@ -12,11 +12,11 @@ function App() {
 	return (
 		<div className="App">
 			<div className="center-column">
-				<ActiveContentContext.Provider value={activeContent}>
-					<PreviewContentContext.Provider value={previewContent}>
+				<ActiveContentContext.Provider value={{ activeContent, setActiveContent }}>
+					<PreviewContentContext.Provider value={{ previewContent, setPreviewContent }}>
 						<Background/>
 						<ActiveContent/>
-						<MainMenu setActiveContent={setActiveContent} setPreviewContent={setPreviewContent}/>
+						<MainMenu/>
 						<SocialMedia/>
 					</PreviewContentContext.Provider>
 				</ActiveContentContext.Provider>

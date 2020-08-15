@@ -5,7 +5,7 @@ import useRaiseActiveContent from './useRaiseActiveContent';
 import { ActiveContentContext } from '../content';
 
 export default items => {
-	const activeContent = useContext(ActiveContentContext);
+	const { activeContent } = useContext(ActiveContentContext);
 	const [fades] = useFadeIns(items.length);
 	const [bounces] = useBounces(items.length);
 	

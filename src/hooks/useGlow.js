@@ -5,7 +5,7 @@ import { ActiveContentContext, COLORS } from '../content';
 
 export default content => {
 	const { backgroundColor, glowColor } = useMemo(() => COLORS[content], [content]);
-	const activeContent = useContext(ActiveContentContext);
+	const { activeContent } = useContext(ActiveContentContext);
 	const isActiveContent = content === activeContent;
 	const [isGrabbed, setIsGrabbed] = useState(false);
 	const [isHovered, setIsHovered] = useState(false);

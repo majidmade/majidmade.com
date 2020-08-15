@@ -5,7 +5,7 @@ import useRaiseActiveContent from '../hooks/useRaiseActiveContent';
 import { ActiveContentContext, TITLES } from '../content';
 
 const ActiveContent = () => {
-	const activeContent = useContext(ActiveContentContext);
+	const { activeContent } = useContext(ActiveContentContext);
 	const { title, subtitle } = TITLES[activeContent];
 	const { textColor } = useColor(activeContent);
 	const raise = useRaiseActiveContent(activeContent);

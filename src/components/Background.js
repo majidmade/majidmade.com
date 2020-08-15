@@ -5,7 +5,7 @@ import useFadeIns from '../hooks/useFadeIns';
 import { ActiveContentContext } from '../content';
 
 const Background = () => {
-	const activeContent = useContext(ActiveContentContext);
+	const { activeContent } = useContext(ActiveContentContext);
 	const { backgroundColor } = useColor(activeContent);
 	const [[opacity]] = useFadeIns(1);
 
