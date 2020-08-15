@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import { animated } from 'react-spring';
 import useColor from '../hooks/useColor';
 import useFadeIns from '../hooks/useFadeIns';
-import { ContentContext } from '../content';
+import { ActiveContentContext } from '../content';
 
 const Background = () => {
-	const activeContent = useContext(ContentContext);
+	const activeContent = useContext(ActiveContentContext);
 	const { backgroundColor } = useColor(activeContent);
 	const [[opacity]] = useFadeIns(1);
 

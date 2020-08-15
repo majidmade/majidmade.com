@@ -18,7 +18,7 @@ exports[`renders the Symbol(AVATAR) page correctly 1`] = `
       </div>
       <div
         class="active-content"
-        style="color: rgb(255, 255, 255);"
+        style="opacity: 1; color: rgb(255, 255, 255); transform: translate(0, -5vh);"
       >
         <h1>
           Majid Razvi
@@ -34,7 +34,7 @@ exports[`renders the Symbol(AVATAR) page correctly 1`] = `
           alt="About Me"
           class="menu-icon"
           src="/avatar.jpg"
-          style="opacity: 1; cursor: grab; z-index: 1; transform: translate(0, 0vh); box-shadow: 0 0 0vh 0vh rgb(20, 12, 14);"
+          style="opacity: 1; cursor: grab; z-index: 1; transform: translate(0, -5vh); box-shadow: 0 0 0vh 0vh rgb(20, 12, 14);"
         />
         <img
           alt="VCU"
@@ -235,7 +235,7 @@ exports[`renders the Symbol(PIVOTAL) page correctly 1`] = `
       </div>
       <div
         class="active-content"
-        style="color: rgb(0, 0, 0);"
+        style="opacity: 1; color: rgb(0, 0, 0); transform: translate(0, -5vh);"
       >
         <h1>
           Pivotal
@@ -269,7 +269,7 @@ exports[`renders the Symbol(PIVOTAL) page correctly 1`] = `
           alt="Pivotal"
           class="menu-icon"
           src="/pivotal.png"
-          style="opacity: 1; cursor: grab; z-index: 1; transform: translate(0, 0vh); box-shadow: 0 0 0vh 0vh rgb(22, 169, 144);"
+          style="opacity: 1; cursor: grab; z-index: 1; transform: translate(0, -5vh); box-shadow: 0 0 0vh 0vh rgb(22, 169, 144);"
         />
         <img
           alt="VMware"
@@ -452,7 +452,7 @@ exports[`renders the Symbol(SAGE) page correctly 1`] = `
       </div>
       <div
         class="active-content"
-        style="color: rgb(255, 255, 255);"
+        style="opacity: 1; color: rgb(255, 255, 255); transform: translate(0, -5vh);"
       >
         <h1>
           Sage
@@ -480,7 +480,7 @@ exports[`renders the Symbol(SAGE) page correctly 1`] = `
           alt="Sage"
           class="menu-icon"
           src="/sage.png"
-          style="opacity: 1; cursor: grab; z-index: 1; transform: translate(0, 0vh); box-shadow: 0 0 0vh 0vh rgb(29, 218, 9);"
+          style="opacity: 1; cursor: grab; z-index: 1; transform: translate(0, -5vh); box-shadow: 0 0 0vh 0vh rgb(29, 218, 9);"
         />
         <img
           alt="Pivotal"
@@ -669,7 +669,7 @@ exports[`renders the Symbol(VCU) page correctly 1`] = `
       </div>
       <div
         class="active-content"
-        style="color: rgb(0, 0, 0);"
+        style="opacity: 1; color: rgb(0, 0, 0); transform: translate(0, -5vh);"
       >
         <h1>
           VCU
@@ -691,7 +691,7 @@ exports[`renders the Symbol(VCU) page correctly 1`] = `
           alt="VCU"
           class="menu-icon"
           src="/vcu.png"
-          style="opacity: 1; cursor: grab; z-index: 1; transform: translate(0, 0vh); box-shadow: 0 0 0vh 0vh black;"
+          style="opacity: 1; cursor: grab; z-index: 1; transform: translate(0, -5vh); box-shadow: 0 0 0vh 0vh black;"
         />
         <img
           alt="Sage"
@@ -886,7 +886,7 @@ exports[`renders the Symbol(VMWARE) page correctly 1`] = `
       </div>
       <div
         class="active-content"
-        style="color: rgb(255, 255, 255);"
+        style="opacity: 1; color: rgb(255, 255, 255); transform: translate(0, -5vh);"
       >
         <h1>
           VMware
@@ -926,7 +926,7 @@ exports[`renders the Symbol(VMWARE) page correctly 1`] = `
           alt="VMware"
           class="menu-icon"
           src="/vmware.png"
-          style="opacity: 1; cursor: grab; z-index: 1; transform: translate(0, 0vh); box-shadow: 0 0 0vh 0vh white;"
+          style="opacity: 1; cursor: grab; z-index: 1; transform: translate(0, -5vh); box-shadow: 0 0 0vh 0vh white;"
         />
       </div>
       <div
@@ -1105,7 +1105,7 @@ exports[`renders the home page correctly 1`] = `
       </div>
       <div
         class="active-content"
-        style="color: rgb(255, 255, 255);"
+        style="opacity: 1; color: rgb(0, 0, 0); transform: translate(0, -5vh);"
       >
         <h1 />
         <h3 />
@@ -1320,7 +1320,7 @@ exports[`renders the home page correctly 2`] = `
       </div>
       <div
         class="active-content"
-        style="color: rgb(255, 255, 255);"
+        style="opacity: 1; color: rgb(0, 0, 0); transform: translate(0, -5vh);"
       >
         <h1 />
         <h3 />

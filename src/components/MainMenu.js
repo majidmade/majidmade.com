@@ -4,7 +4,7 @@ import MenuIcon from './MenuIcon';
 import useMenuIcons from '../hooks/useMenuIcons.js';
 import { ALL_CONTENT } from '../content';
 
-const MainMenu = ({ setActiveContent }) => {
+const MainMenu = ({ setActiveContent, setPreviewContent }) => {
 	const icons = useMenuIcons(ALL_CONTENT);
 	return (
 		<div className='main-menu'>
@@ -13,6 +13,7 @@ const MainMenu = ({ setActiveContent }) => {
 					key={content.toString()}
 					content={content}
 					setActiveContent={setActiveContent}
+					setPreviewContent={setPreviewContent}
 					fadeStyles={fade}
 					bounceStyles={bounce}
 				/>
@@ -22,7 +23,8 @@ const MainMenu = ({ setActiveContent }) => {
 };
 
 MainMenu.propTypes = {
-	setActiveContent: PropTypes.func.isRequired
+	setActiveContent: PropTypes.func.isRequired,
+	setPreviewContent: PropTypes.func.isRequired,
 };
 
 export default MainMenu;

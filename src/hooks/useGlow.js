@@ -1,11 +1,11 @@
 import { useState, useContext, useMemo } from 'react';
 import { useSpring } from 'react-spring';
 import { useGesture } from 'react-use-gesture';
-import { ContentContext, COLORS } from '../content';
+import { ActiveContentContext, COLORS } from '../content';
 
 export default content => {
 	const { backgroundColor, glowColor } = useMemo(() => COLORS[content], [content]);
-	const activeContent = useContext(ContentContext);
+	const activeContent = useContext(ActiveContentContext);
 	const isActiveContent = content === activeContent;
 	const [isGrabbed, setIsGrabbed] = useState(false);
 	const [isHovered, setIsHovered] = useState(false);

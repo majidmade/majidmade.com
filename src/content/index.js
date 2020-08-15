@@ -6,12 +6,13 @@ const VCU = Symbol('VCU');
 const SAGE = Symbol('SAGE');
 const PIVOTAL = Symbol('PIVOTAL');
 const VMWARE = Symbol('VMWARE');
-const FALLBACK = Symbol('DONTEXPORTME');
+const FALLBACK = Symbol('FALLBACK')
 
 export const ALL_CONTENT = [ AVATAR, VCU, SAGE, PIVOTAL, VMWARE, ];
 export const ContentPropType = PropTypes.oneOf(ALL_CONTENT);
 
-export const ContentContext = createContext(null);
+export const ActiveContentContext = createContext();
+export const PreviewContentContext = createContext();
 
 // dev QoL
 const withFallback = {
