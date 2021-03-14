@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
+    position: fixed;
+    bottom: 2vh;
 }
 
 .rounded {
@@ -13,8 +14,10 @@
     width: 10vh;
     height: 10vh;
     margin-bottom: 2vh;
+    box-shadow: 0 0 1.5vh 1vh rgb(213, 200, 102);
 }
 
 .social-icon {
-    margin-bottom: 0.5vh;
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
 }

@@ -10,7 +10,7 @@ function App() {
       <h1><mark>hi</mark></h1>
       <text>
         im <mark>majid</mark> from denver, colorado.
-        <br/><br/>
+        <br/>
         im a <mark>software engineer</mark> at:
       </text>
       {/*<text>*/}

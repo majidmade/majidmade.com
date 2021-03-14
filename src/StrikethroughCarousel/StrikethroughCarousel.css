@@ -33,13 +33,24 @@
 .carousel-item:not(:last-of-type) {
     color: gray;
     text-decoration: line-through;
+    cursor: pointer;
 }
+
+.carousel-item:not(:last-of-type):hover {
+    color: white;
+    text-decoration: none;
+}
+
+/*.carousel-item:not(:last-of-type):hover::before,*/
+/*.carousel-item:not(:last-of-type):hover::after {*/
+/*    content: '✨'*/
+/*}*/
 
 /* the last item that's currently visible */
 .carousel-item:last-of-type {
     color: white;
     border-right: .15em solid transparent;
-    animation: typing 1s steps(40, end),
+    animation: typing 0.5s steps(40, end),
     blink-caret .65s step-end 2;
 }
 
