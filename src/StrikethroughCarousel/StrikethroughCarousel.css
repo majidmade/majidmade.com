@@ -1,0 +1,55 @@
+/*!
+ * @preserve
+ * thank you: https://css-tricks.com/snippets/css/typewriter-effect/
+*/
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: rgb(213, 200, 102);
+  }
+}
+
+.carousel {
+    font-family: 'dm', monospace;
+}
+
+.carousel-item {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+.carousel-item:not(:last-of-type) {
+    color: gray;
+    text-decoration: line-through;
+}
+
+/* the last item that's currently visible */
+.carousel-item:last-of-type {
+    color: white;
+    border-right: .15em solid transparent;
+    animation: typing 1s steps(40, end),
+    blink-caret .65s step-end 2;
+}
+
+/* the last item, period */
+.carousel-item.carousel-last-item {
+    font-style: italic;
+    color: mediumspringgreen;
+}
+
+.carousel-item.carousel-last-item::before,
+.carousel-item.carousel-last-item::after {
+    content: "✨";
+}
