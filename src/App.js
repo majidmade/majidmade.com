@@ -9,14 +9,10 @@ function App() {
     <main>
       <h1><mark>hi</mark></h1>
       <text>
-        im <mark>majid</mark> from denver, colorado.
-        <br/>
-        im a <mark>software engineer</mark> at:
+        im <mark>majid</mark> from denver.<br/>
+        i studied <mark>philosophy</mark> at vcu;<br/>
+        now i <mark>write software</mark> at:
       </text>
-      {/*<text>*/}
-      {/*  Lorem ipsum dolor sit amet, consectetur adipiscing elit.*/}
-      {/*  Maecenas consectetur mauris vitae urna dapibus:*/}
-      {/*</text>*/}
       <StrikethroughCarousel items={roles}/>
       <SocialIcons/>
     </main>
