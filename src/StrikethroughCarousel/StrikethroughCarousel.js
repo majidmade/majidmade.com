@@ -3,7 +3,7 @@ import {animated} from "react-spring";
 import './StrikethroughCarousel.css'
 import useCarousel from "./hooks/useCarousel";
 
-export default ({items}) => {
+const StrikethroughCarousel = ({items}) => {
 
   const transitions = useCarousel(items)
 
@@ -24,3 +24,5 @@ export default ({items}) => {
      </div>
   )
 }
+
+export default StrikethroughCarousel

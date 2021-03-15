@@ -9,11 +9,23 @@ const SOCIAL_LINKS = [
   'mailto:majidrazvi@gmail.com',
 ];
 
-export default () => (
+const SocialIcons = () => (
   <div className='social-icons'>
     <img
       className='avatar-icon rounded'
-      src='/avatar_new_cropped.png'/>
-    <div>{SOCIAL_LINKS.map(url => <SocialIcon url={url} fgColor='white'/>)}</div>
+      src='/avatar_new_cropped.png'
+      alt=''
+    />
+    <div>{
+      SOCIAL_LINKS.map(url => (
+        <SocialIcon
+          key={url}
+          url={url}
+          fgColor='white'
+        />
+      ))
+    }</div>
   </div>
 )
+
+export default SocialIcons

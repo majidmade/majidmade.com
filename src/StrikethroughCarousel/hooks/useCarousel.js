@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useTransition} from "react-spring";
 
-export default (items) => {
+const useCarousel = (items) => {
   const [managedItems, setManagedItems] = useState([])
 
   useEffect(() => {
@@ -20,3 +20,5 @@ export default (items) => {
 
   return transitions
 }
+
+export default useCarousel

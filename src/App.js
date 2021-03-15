@@ -8,11 +8,11 @@ function App() {
   return (<div className='App'>
     <main>
       <h1><mark>hi</mark></h1>
-      <text>
+      <p>
         im <mark>majid</mark> from denver.<br/>
         i studied <mark>philosophy</mark> at vcu;<br/>
-        now i <mark>write software</mark> at:
-      </text>
+        now i <mark>make software</mark> at:
+      </p>
       <StrikethroughCarousel items={roles}/>
       <SocialIcons/>
     </main>
