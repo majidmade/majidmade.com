@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useTransition} from "react-spring";
 
-const useCarousel = (items) => {
+const useCarousel = (items, msDelay) => {
   const [managedItems, setManagedItems] = useState([])
 
   useEffect(() => {
@@ -9,9 +9,9 @@ const useCarousel = (items) => {
     items.forEach((item, itemIndex) => {
       setTimeout(() => {
         setManagedItems(mis => [...mis, item])
-      }, itemIndex * 500)
+      }, msDelay + (itemIndex * 500))
     })
-  }, [items, setManagedItems])
+  }, [items, setManagedItems, msDelay])
 
   const transitions = useTransition(managedItems, null, {
     from: {opacity: '0'},

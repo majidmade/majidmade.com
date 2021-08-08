@@ -13,7 +13,7 @@ function App() {
         i studied <mark>philosophy</mark> at vcu;<br/>
         now i <mark>make software</mark> at:
       </p>
-      <StrikethroughCarousel items={roles}/>
+      <StrikethroughCarousel items={roles} msDelay={1000}/>
       <SocialIcons/>
     </main>
   </div>);
