@@ -5,7 +5,7 @@ import './SocialIcons.css'
 const SOCIAL_LINKS = [
   'https://www.twitter.com/majidrazvi',
   'https://www.linkedin.com/in/majidrazvi',
-  'https://github.com/majidmade/majidmade.com/tree/flowhub-remake/src',
+  'https://github.com/majidmade/majidmade.com',
   'mailto:majidrazvi@gmail.com',
 ];
 
